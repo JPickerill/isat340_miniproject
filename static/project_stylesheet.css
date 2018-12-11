@@ -1,0 +1,14 @@
+h1{	text-align: center;
+	font-family: Courier New;
+	color: White;
+}
+h2{
+	text-align: center;
+	font-family: courier New;
+	color: White;}
+
+body{
+	background-color: #00FFFF;
+	background-image: url(/static/jolie.jpg););
+	background-position: right;
+}

@@ -1,0 +1,13 @@
+body{
+	background-image: url(/static/hollywood.jpg);
+	color: D3D3D3;
+}
+
+table{
+	border-style: dotted;
+}
+
+td{
+	border-style: dotted;
+	font-family: Courier New;
+}

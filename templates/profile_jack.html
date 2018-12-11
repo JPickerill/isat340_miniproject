@@ -1,0 +1,70 @@
+<!DOCTYPE html/>
+
+
+<html>
+<head>
+
+<style type="text/css">body {background-color: lightcyan;} </style>
+</head>
+
+<body>
+<fieldset>
+	<legend> Flask App: </legend>
+		<h3 align = "left" > Please fill out the following form </h3>
+		<h4 align = "left"> <i> All fields are required and must contain valid information</i> </h4>
+<form action = "" method ="post">
+<Table Border = 1>
+
+		
+<TR>
+	<TD>Member ID:<br></TD> <TD> <input type="text" name="memberID" value= "{{memberID}}" /> <br></TD>
+</TR>
+
+<TR>	
+	<TD>First Name:<br></TD> <TD><input type = "text" name="firstname" value ="{{firstname}}"/></TD>
+	
+</TR>
+	
+	
+<TR>	
+	<TD>Last Name:<br></TD> <TD><input type = "text" name="lastname" value = "{{lastname}}"/></TD>
+	
+</TR>
+
+<TR>	
+	<TD>Age:<br></TD> <TD><input type = "number" name="age" value = "{{age}}"/></TD>
+	
+</TR>
+
+<TR>	
+	<TD> Email:<br> </TD> <TD> <input type = "email" name="email" value = "{{email}}"/> </TD>
+		
+</TR>
+
+<TR>
+	<TD> 
+		<img src="{{url_for('static', filename='jack.jpg') }}" width="130" height="130">
+	</TD>
+	<TD>
+		<textarea name = "bio" rows = "10" cols ="100">{{bio}} </textarea>
+	</TD>
+</TR>
+<TR>
+	<TD colspan = "2">
+	<input type ="submit" value="Click to Update"><colspan ="2">
+	</TD>
+</TR>
+<TR>
+	<TD><a href ="/view_all_celebs"> Click to view all of the celebrities</a></TD>
+</TR>
+
+<TR>
+	<TD><a href ="/view_one_celeb"> Click to view one of the celebrities</a></TD>
+</TR>
+{% if success %}
+		<h5 style="color:magenta;"> Data successfully submitted to the database!</h5>
+{% endif %}
+</form>
+</fieldset>
+</body>
+</html>

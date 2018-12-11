@@ -1,0 +1,48 @@
+<!doctype html/>
+<html>
+	<head>
+		<title> Flask App - Celebrities </title>
+		<link type="text/css" rel = "stylesheet" href="static/celebs_stylesheet.css"/>
+	</head>
+		<body>
+		
+		<table border = 5>
+		{% for row in rows %}
+		<TR>
+			<TD>Photo</TD><TD><img height = "150" width="150" src="{{row[5]}}"/></TD>
+		</TR>
+
+		<TR>	
+			<TD>Celebrity ID</TD> <TD>{{row[0]}}</TD>
+	
+		</TR>
+	
+	
+		<TR>	
+			<TD>First Name</TD> <TD>{{row[1]}}</TD>
+	
+		</TR>
+		<TR>	
+			<TD>Last Name</TD> <TD>{{row[2]}}</TD>
+	
+		</TR>
+		<TR>	
+			<TD>Age</TD> <TD>{{row[3]}}</TD>
+	
+		</TR>
+
+		<TR>	
+			<TD> Email</TD> <TD>{{row[4]}}</TD>
+	
+		</TR>
+
+		<TR>
+			<TD>Bio</TD> <TD>{{row[6]}}</TD>
+		</TR>
+	<TR>
+		<TD colspan=2><br></TD>
+	</TR>
+	{% endfor %}
+	</table>
+	</body>
+</html>

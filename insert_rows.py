@@ -1,0 +1,10 @@
+import sqlite3
+conn = sqlite3.connect("celebrities.db")
+cursor = conn.cursor()
+sql ="insert into celebs values (?,?,?,?,?,?,?)"
+data =((1,"Angelina", "Jolie", 40, "angie@hollywood.us", "http://www.nphinity.com/pics/aj.jpg","Actress and humanitarian Angelina Jolie Voight was born on June 4, 1975, in Los Angeles, California, to actor Jon Voight and actress Marcheline Bertrand. She rose to stardom in the 1990s."),(2,"Brad", "Pitt", 51, "brad@hollywood.us", "http://www.nphinity.com/pics/bp.jpg","Bradley Pitt is an American actor and film producer. He has received multiple awards and nominations including an Academy Award as producer under his own company Plan B Entertainment."),(3,"Snow", "White", 21, "sw@disney.org", "http://www.nphinity.com/pics/sw.jpg","Snow White is a fictional character and a main character from Walt Disney Productions' first animated feature film Snow White and the Seven Dwarfs"),(4,"Darth", "Vader", 29, "dv@darkside.me", "http://www.nphinity.com/pics/dv.jpg"," Darth Vader is a fictional character in the Star Wars franchise. He is the overarching central character of the original film series, appearing as a main and pivotal antagonist serving the Galactic Empire"),
+(5,"Taylor", "Swift", 25, "ts@1989.us", "http://www.nphinity.com/pics/ts.jpg","Taylor Alison Swift is an American singer-songwriter. One of the world's leading contemporary recording artists, she is known for narrative songs about her personal life"),(6,"Beyonce", "Knowles", 34, "beyonce@jayz.me", "http://www.nphinity.com/pics/bk.jpg","Beyoncé Giselle Knowles-Carter is an American singer, songwriter, producer, and actress. Born and raised in Houston, Texas"),(7,"Selena", "Gomez", 23, "selena@hollywood.us", "http://www.nphinity.com/pics/sg.jpg","Selena Marie Gomez is an American singer, actress, and producer"),(8,"Stephen", "Curry", 27, "steph@golden.bb", "http://www.nphinity.com/pics/sc.jpg","Wardell Stephen Curry II is an American professional basketball player for the Golden State Warriors of the National Basketball Association"))
+
+cursor.executemany(sql,data)
+conn.commit()
+conn.close()
